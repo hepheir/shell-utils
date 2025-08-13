@@ -108,3 +108,7 @@ export LANG=en_US.UTF-8
 PROMPT='
 ┌ %{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}] %(!.%{$fg[red]%}.%{$fg[green]%})%~$(git_prompt_info)%{$reset_color%} $VIRTUAL_ENV_PROMPT
 └ $ '
+
+restart() {
+  source ~/.zshrc
+}

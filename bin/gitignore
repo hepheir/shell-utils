@@ -1,0 +1,20 @@
+#!/bin/bash
+
+LANG="Python"
+TARGET=".gitignore"
+
+# check is git repository
+if [ ! -d ".git" ]; then
+    echo "Not a git repository"
+    exit 1
+fi
+
+# check .gitigonre exists
+if [ -f $TARGET ]; then
+    echo "$TARGET already exists"
+    exit 1
+fi
+
+curl https://raw.githubusercontent.com/github/gitignore/refs/heads/main/$LANG.gitignore -o $TARGET
+git add $TARGET
+git commit -m "chore: add $LANG$TARGET"

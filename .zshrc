@@ -1,4 +1,4 @@
-export ZSH_UTIL=$(dirname $(realpath $0))
+export ZSH_UTIL=$(dirname $(readlink ~/.zshrc))
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$ZSH_UTIL/bin:$PATH
